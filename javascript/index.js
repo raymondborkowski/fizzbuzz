@@ -15,19 +15,19 @@
 
 function advanced(set) {
   var found = false,
-  line = '',
-  keys = Object.keys(set),
-  cleanKeys = [];
-  keys.forEach(function(key) {
-    cleanKeys.push(parseInt(key, 10));
-  });
+    line = '',
+    keys = Object.keys(set),
+    cleanKeys = [];
+    keys.forEach(function(key) {
+      cleanKeys.push(parseInt(key, 10));
+    });
   for (var i = 1; i <= 100; i++) {
     found = false;
     line = '';
-    for (var k = 0; k < cleanKeys.length; k++) {
-      if (i % cleanKeys[k] === 0) {
+    for (var j = 0; j < cleanKeys.length; j++) {
+      if (i % cleanKeys[j] === 0) {
         found = true;
-        line += set[cleanKeys[k]];
+        line += set[cleanKeys[j]];
       }
     }
     if (!found) {
@@ -38,8 +38,8 @@ function advanced(set) {
 }
 
 advanced({
+  '2': "second",
   '3': "Fizz",
   '5': "Buzz",
-  '2': "second",
   '6': "sixth"
 });
