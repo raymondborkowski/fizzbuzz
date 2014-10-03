@@ -1,7 +1,7 @@
-def advanced(set):
+def advanced(myDict):
   found = False
   line = ''
-  keys = set.keys()
+  keys = myDict.keys()
   cleanKeys = []
   for key in keys:
     cleanKeys.append(int(key))
@@ -11,7 +11,7 @@ def advanced(set):
     for j in range(0, len(cleanKeys)):
       if i % cleanKeys[j] == 0:
         found = True
-        line += set[keys[j]]
+        line += myDict[keys[j]]
     if not found:
       line += str(i)
     print str(i) + ': ' + line

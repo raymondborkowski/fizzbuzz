@@ -13,10 +13,10 @@
 //   }
 // }
 
-function advanced(set) {
+function advanced(myMap) {
   var found = false,
     line = '',
-    keys = Object.keys(set),
+    keys = Object.keys(myMap),
     cleanKeys = [];
     keys.forEach(function(key) {
       cleanKeys.push(parseInt(key, 10));
@@ -27,7 +27,7 @@ function advanced(set) {
     for (var j = 0; j < cleanKeys.length; j++) {
       if (i % cleanKeys[j] === 0) {
         found = true;
-        line += set[cleanKeys[j]];
+        line += myMap[cleanKeys[j]];
       }
     }
     if (!found) {
