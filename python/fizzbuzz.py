@@ -1,27 +1,28 @@
 """
-run it normally to see the output, or do
+run tests with:
 
-    python fizzbuzz.py test
+    python test_fizzbuzz.py
 
-to just run the tests
+
 """
+
+import collections
 
 
 def advanced(divisor_mappings):
     output = []
     found = False
     line = ''
-    keys = divisor_mappings.keys()
-    divisors = []
-    for key in keys:
-        divisors.append(int(key))
+    divisor_map = collections.OrderedDict(
+        (int(k), v) for k, v in divisor_mappings.items()
+    )
     for i in range(1, 101):
         found = False
         line = ''
-        for j in range(0, len(divisors)):
-            if i % divisors[j] == 0:
+        for divisor in divisor_map:
+            if i % divisor == 0:
                 found = True
-                line += divisor_mappings[keys[j]]
+                line += divisor_map[divisor]
         if not found:
             line += str(i)
         output.append(str(i) + ': ' + line)
