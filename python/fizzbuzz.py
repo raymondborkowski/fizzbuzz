@@ -18,9 +18,11 @@ def advanced(divisor_mappings):
         output.append(str(i) + ': ' + line)
     return "\n".join(output)
 
-print advanced({
-    '2': 'second',
-    '3': 'Fizz',
-    '5': 'Buzz',
-    '6': 'sixth'
-})
+
+if __name__ == '__main__':
+    print advanced({
+        '2': 'second',
+        '3': 'Fizz',
+        '5': 'Buzz',
+        '6': 'sixth'
+    })
