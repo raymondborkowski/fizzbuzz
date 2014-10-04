@@ -1,3 +1,12 @@
+"""
+run it normally to see the output, or do
+
+    python fizzbuzz.py test
+
+to just run the tests
+"""
+
+
 def advanced(divisor_mappings):
     output = []
     found = False
