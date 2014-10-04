@@ -1,22 +1,24 @@
-def advanced(myDict):
+def advanced(divisor_mappings):
+    output = []
     found = False
     line = ''
-    keys = myDict.keys()
-    cleanKeys = []
+    keys = divisor_mappings.keys()
+    divisors = []
     for key in keys:
-        cleanKeys.append(int(key))
+        divisors.append(int(key))
     for i in range(1, 101):
         found = False
         line = ''
-        for j in range(0, len(cleanKeys)):
-            if i % cleanKeys[j] == 0:
+        for j in range(0, len(divisors)):
+            if i % divisors[j] == 0:
                 found = True
-                line += myDict[keys[j]]
+                line += divisor_mappings[keys[j]]
         if not found:
             line += str(i)
-        print str(i) + ': ' + line
+        output.append(str(i) + ': ' + line)
+    return "\n".join(output)
 
-advanced({
+print advanced({
     '2': 'second',
     '3': 'Fizz',
     '5': 'Buzz',
