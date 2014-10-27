@@ -8,10 +8,10 @@ Given a map of values like so:
 
 ```
 {
-  '2': 'second',
-  '3': 'Fizz',
-  '5': 'Buzz',
-  '6': 'sixth'
+  2: 'second',
+  3: 'Fizz',
+  5: 'Buzz',
+  6: 'sixth'
 }
 ```
 
